@@ -1,0 +1,14 @@
+version: '3'
+services:
+  echo-server:
+    image: ealen/echo-server:latest
+    environment:
+      - ENABLE__ENVIRONMENT=false
+    ports:
+      - 3000:80
+  echo-new-server:
+    image: ealen/echo-server:latest
+    environment:
+      - ENABLE__ENVIRONMENT=false
+    ports:
+      - 4000:80
