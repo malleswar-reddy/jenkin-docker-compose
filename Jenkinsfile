@@ -28,7 +28,8 @@ pipeline {
         script {
           if (params.echo_server) {
             sh 'docker compose up -d echo-server --no-color --wait'
-          } else (params.echo_new_server) {
+          }
+          if (params.echo_new_server) {
             sh 'docker compose up -d echo-new-server --no-color --wait'
           }
           sh 'docker compose ps'
